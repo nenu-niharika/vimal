@@ -1,0 +1,2252 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Vimal ❤️</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+html,body{
+    margin:0;
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+    font-family:Arial,sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #303060,
+            #0d0d2b 55%,
+            #02020b
+        );
+
+    color:white;
+}
+
+
+/* =========================
+   DREAMY BACKGROUND PHOTO
+========================= */
+
+.photoBackground{
+
+    position:fixed;
+    inset:0;
+
+    background-image:
+        linear-gradient(
+            rgba(5,5,30,.65),
+            rgba(3,3,20,.82)
+        ),
+        url("./vimal.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    filter:
+        blur(2px)
+        saturate(.9);
+
+    opacity:.48;
+
+    transform:scale(1.05);
+
+    z-index:0;
+    pointer-events:none;
+}
+
+
+/* =========================
+   GIFT VIDEO
+========================= */
+
+.videoBackground{
+
+    position:fixed;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:0;
+
+    z-index:0;
+
+    pointer-events:none;
+
+    transition:opacity .5s ease;
+}
+
+
+/* =========================
+   GIFT MODE
+========================= */
+
+body.giftMode .photoBackground{
+    display:none;
+}
+
+body.giftMode .bgStar{
+    display:none;
+}
+
+body.giftMode .moon{
+    display:none;
+}
+
+body.giftMode .vignette{
+    display:none;
+}
+
+body.giftMode .videoBackground{
+    opacity:1;
+    z-index:1;
+}
+
+body.giftMode .card{
+    width:100%;
+    max-width:none;
+    height:100vh;
+    max-height:none;
+    margin:0;
+    border-radius:0;
+
+    overflow-y:auto;
+    scrollbar-width:none;
+
+    background:transparent;
+    border:none;
+    box-shadow:none;
+}
+
+body.giftMode .card::-webkit-scrollbar{
+    display:none;
+}
+
+/* =========================
+   DARK VIGNETTE
+========================= */
+
+.vignette{
+
+    position:fixed;
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 10%,
+            rgba(2,2,15,.25) 50%,
+            rgba(2,2,15,.8) 100%
+        );
+
+    z-index:1;
+    pointer-events:none;
+}
+
+
+/* =========================
+   STARS
+========================= */
+
+.bgStar{
+
+    position:fixed;
+
+    width:3px;
+    height:3px;
+
+    background:white;
+
+    border-radius:50%;
+
+    box-shadow:
+        0 0 6px white,
+        0 0 12px white;
+
+    z-index:2;
+
+    animation:
+        twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+
+    from{
+        opacity:.2;
+        transform:scale(.7);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1.5);
+    }
+}
+
+
+/* =========================
+   MOON
+========================= */
+
+.moon{
+
+    position:fixed;
+
+    top:30px;
+    right:35px;
+
+    width:75px;
+    height:75px;
+
+    background:#fff6c7;
+
+    border-radius:50%;
+
+    box-shadow:
+        0 0 20px #fff6c7,
+        0 0 45px rgba(255,240,150,.5);
+
+    z-index:3;
+}
+
+.moon:after{
+
+    content:"";
+
+    position:absolute;
+
+    left:22px;
+    top:-7px;
+
+    width:75px;
+    height:75px;
+
+    border-radius:50%;
+
+    background:#18183d;
+}
+
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.card{
+
+    position:relative;
+
+    width:92%;
+    max-width:570px;
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    margin:5vh auto;
+
+    padding:30px 22px;
+
+    text-align:center;
+
+    background:
+        rgba(18,18,58,.91);
+
+    border:
+        1px solid rgba(255,255,255,.15);
+
+    border-radius:30px;
+
+    box-shadow:
+        0 0 45px rgba(130,100,255,.4);
+
+    z-index:10;
+}
+
+
+h1{
+
+    color:#ffd9f3;
+
+    text-shadow:
+        0 0 10px #ff70ce,
+        0 0 25px #ff40c0;
+}
+
+h2{
+    color:#ffe79a;
+}
+
+p{
+
+    line-height:1.7;
+
+    color:#eee;
+
+    font-size:17px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button{
+
+    border:0;
+
+    padding:14px 27px;
+
+    margin:8px;
+
+    border-radius:30px;
+
+    font-size:16px;
+
+    cursor:pointer;
+}
+
+.yesButton{
+
+    color:white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4fa3,
+            #8065ff
+        );
+
+    box-shadow:
+        0 0 20px rgba(255,80,180,.5);
+
+    transition:.25s;
+}
+
+.yesButton:hover{
+    transform:scale(1.07);
+}
+
+
+/* =========================
+   NO BUTTON
+========================= */
+
+.noButton{
+
+    background:#444;
+    color:white;
+    position:relative;
+}
+
+
+/* =========================
+   CHOICES
+========================= */
+
+.choice{
+
+    display:inline-flex;
+
+    width:135px;
+    height:125px;
+
+    margin:8px;
+
+    padding:15px 8px;
+
+    border-radius:20px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border:
+        1px solid rgba(255,255,255,.15);
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    align-items:center;
+    justify-content:center;
+
+    flex-direction:column;
+
+    vertical-align:top;
+}
+
+.choice:hover{
+
+    transform:
+        translateY(-7px)
+        scale(1.05);
+
+    background:
+        rgba(255,255,255,.13);
+}
+
+.choiceEmoji{
+
+    font-size:42px;
+
+    margin-bottom:8px;
+}
+
+
+/* =========================
+   NORMAL PHOTO
+========================= */
+
+.photo{
+
+    width:160px;
+    height:160px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:5px solid #ffe79a;
+
+    box-shadow:
+        0 0 15px #ffe79a,
+        0 0 30px rgba(255,231,154,.5);
+
+    margin:12px;
+}
+
+
+/* =========================
+   GIFT TITLE
+========================= */
+
+.giftTitle{
+
+    font-size:32px;
+
+    color:#ffe8a3;
+
+    text-shadow:
+        0 0 10px #ffe8a3,
+        0 0 30px rgba(255,220,120,.5);
+}
+
+
+/* =========================
+   GIFT NEW PHOTO
+========================= */
+
+.giftPhoto{
+    width:auto;
+    height:auto;
+    max-width:60%;
+    max-height:40vh;
+    object-fit:contain;
+
+    border-radius:22px;
+
+    border:4px solid rgba(255,231,154,.9);
+
+    box-shadow:
+        0 0 20px rgba(255,231,154,.7),
+        0 0 45px rgba(255,105,201,.5);
+
+    margin:15px auto;
+    display:block;
+}
+
+/* =========================
+   CAKE
+========================= */
+
+.wishTitle{
+
+    font-size:32px;
+
+    color:#ffe9a6;
+
+    text-shadow:
+        0 0 10px #ffe9a6,
+        0 0 30px rgba(255,220,120,.5);
+}
+
+.aesthetic-cake{
+
+    position:relative;
+
+    width:250px;
+    height:220px;
+
+    margin:25px auto;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.aesthetic-cake:hover{
+    transform:scale(1.04);
+}
+
+.cakeEmoji{
+
+    font-size:125px;
+
+    line-height:1;
+}
+
+
+/* =========================
+   CANDLE
+========================= */
+
+.candle{
+
+    position:absolute;
+
+    top:25px;
+
+    font-size:55px;
+
+    z-index:3;
+}
+
+.flame{
+
+    position:absolute;
+
+    top:-8px;
+
+    font-size:35px;
+
+    z-index:5;
+
+    filter:
+        drop-shadow(0 0 8px orange)
+        drop-shadow(0 0 20px gold);
+
+    animation:
+        flameGlow .6s infinite alternate;
+}
+
+@keyframes flameGlow{
+
+    from{
+        transform:
+            scale(1)
+            rotate(-3deg);
+    }
+
+    to{
+        transform:
+            scale(1.15)
+            rotate(3deg);
+    }
+}
+
+
+/* =========================
+   POP PHOTO
+========================= */
+
+.popPhoto{
+
+    position:fixed;
+
+    width:125px;
+    height:125px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:4px solid #ffe79a;
+
+    box-shadow:
+        0 0 10px white,
+        0 0 25px #ffe79a,
+        0 0 45px #ff69c9;
+
+    z-index:9990;
+
+    pointer-events:none;
+
+    opacity:0;
+
+    transform:
+        translate(-50%,-50%)
+        scale(.1)
+        rotate(-15deg);
+
+    animation:
+        photoPop
+        2.2s ease forwards;
+}
+
+@keyframes photoPop{
+
+    0%{
+        opacity:0;
+
+        transform:
+            translate(-50%,-50%)
+            scale(.1)
+            rotate(-15deg);
+    }
+
+    15%{
+        opacity:1;
+
+        transform:
+            translate(-50%,-50%)
+            scale(1.2)
+            rotate(5deg);
+    }
+
+    30%{
+        transform:
+            translate(-50%,-50%)
+            scale(.9)
+            rotate(-3deg);
+    }
+
+    45%{
+        transform:
+            translate(-50%,-50%)
+            scale(1)
+            rotate(0deg);
+    }
+
+    75%{
+        opacity:1;
+
+        transform:
+            translate(-50%,-50%)
+            scale(1.04);
+    }
+
+    100%{
+        opacity:0;
+
+        transform:
+            translate(-50%,-50%)
+            scale(.75);
+    }
+}
+
+
+/* =========================
+   PHOTO STARS
+========================= */
+
+.photoStar{
+
+    position:fixed;
+
+    z-index:9991;
+
+    pointer-events:none;
+
+    color:#fff;
+
+    text-shadow:
+        0 0 5px white,
+        0 0 12px gold;
+
+    font-size:10px;
+
+    animation:
+        photoStarPop
+        1.5s ease-out forwards;
+}
+
+@keyframes photoStarPop{
+
+    0%{
+        opacity:0;
+
+        transform:
+            translate(-50%,-50%)
+            scale(.2);
+    }
+
+    20%{
+        opacity:1;
+
+        transform:
+            translate(-50%,-50%)
+            scale(1.2);
+    }
+
+    100%{
+        opacity:0;
+
+        transform:
+            translate(
+                calc(-50% + var(--moveX)),
+                calc(-50% + var(--moveY))
+            )
+            scale(.3);
+    }
+}
+
+
+/* =========================
+   BANGARAM / VIMAL
+========================= */
+
+.clickName{
+
+    position:fixed;
+
+    z-index:9995;
+
+    pointer-events:none;
+
+    white-space:nowrap;
+
+    font-weight:bold;
+
+    color:#ffe9a6;
+
+    text-shadow:
+        0 0 5px white,
+        0 0 12px #ffd700,
+        0 0 20px #ff69c9;
+
+    animation:
+        softName
+        2.8s ease forwards;
+}
+
+@keyframes softName{
+
+    0%{
+        opacity:0;
+
+        transform:
+            translate(-50%,-50%)
+            scale(.45);
+    }
+
+    20%{
+        opacity:1;
+
+        transform:
+            translate(-50%,-50%)
+            scale(1.12);
+    }
+
+    45%{
+        transform:
+            translate(-50%,-50%)
+            scale(1);
+    }
+
+    100%{
+        opacity:0;
+
+        transform:
+            translate(-50%,-50%)
+            scale(.95);
+    }
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti{
+
+    position:fixed;
+
+    width:9px;
+    height:14px;
+
+    top:-20px;
+
+    z-index:500;
+
+    animation:
+        fall linear forwards;
+}
+
+@keyframes fall{
+
+    to{
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+    }
+}
+
+
+/* =========================
+   HEARTS
+========================= */
+
+.heart{
+
+    position:fixed;
+
+    bottom:-30px;
+
+    font-size:25px;
+
+    z-index:400;
+
+    animation:
+        heartFloat
+        5s linear forwards;
+}
+
+@keyframes heartFloat{
+
+    0%{
+        transform:translateY(0);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    100%{
+
+        transform:
+            translateY(-110vh);
+
+        opacity:0;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .card{
+        padding:24px 10px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    .moon{
+
+        width:55px;
+        height:55px;
+
+        right:15px;
+        top:15px;
+    }
+
+    .moon:after{
+
+        width:55px;
+        height:55px;
+    }
+
+    .choice{
+
+        width:120px;
+        height:120px;
+
+        margin:5px;
+    }
+
+    .photo{
+
+        width:135px;
+        height:135px;
+    }
+
+    .popPhoto{
+
+        width:105px;
+        height:105px;
+    }
+
+   
+}
+.card{
+    scrollbar-width:none;
+}
+
+.card::-webkit-scrollbar{
+    display:none;
+}
+
+
+
+/* =========================
+   FEEDBACK EFFECTS
+========================= */
+.feedbackButtons{display:flex;justify-content:center;align-items:center;gap:14px;margin-top:18px;position:relative;min-height:58px;}
+.feedbackYes,.feedbackNo{border:0;padding:13px 22px;border-radius:30px;font-size:16px;cursor:pointer;}
+.feedbackYes{color:white;background:linear-gradient(135deg,#ff4fa3,#8065ff);box-shadow:0 0 20px rgba(255,80,180,.5);}
+.feedbackNo{background:#444;color:white;position:relative;}
+.feedbackMessage{font-size:20px;font-weight:bold;color:#ffe9a6;text-shadow:0 0 12px #ff69c9;}
+.feedbackFlower{position:fixed;z-index:9999;pointer-events:none;animation:feedbackFlowerPop 2.4s ease forwards;}
+.feedbackStar{position:fixed;z-index:9998;pointer-events:none;animation:feedbackStarPop 1.8s ease forwards;}
+.feedbackPopPhoto{position:fixed;z-index:9997;width:115px;height:115px;object-fit:cover;border-radius:22px;border:4px solid #ffe79a;box-shadow:0 0 15px #ffe79a,0 0 30px #ff69c9;pointer-events:none;animation:feedbackPhotoPop 2.8s ease forwards;}
+@keyframes feedbackFlowerPop{0%{opacity:0;transform:translateY(30px) scale(.2) rotate(-20deg)}20%{opacity:1;transform:scale(1.3) rotate(8deg)}70%{opacity:1;transform:scale(1) translateY(-20px) rotate(-8deg)}100%{opacity:0;transform:translateY(-130px) scale(.7) rotate(20deg)}}
+@keyframes feedbackStarPop{0%{opacity:0;transform:scale(.1)}25%{opacity:1;transform:scale(1.5)}100%{opacity:0;transform:translate(var(--sx),var(--sy)) scale(.3) rotate(180deg)}}
+@keyframes feedbackPhotoPop{0%{opacity:0;transform:scale(.1) rotate(-18deg)}18%{opacity:1;transform:scale(1.15) rotate(5deg)}38%{transform:scale(1) rotate(0)}78%{opacity:1;transform:scale(1.03)}100%{opacity:0;transform:scale(.75) rotate(8deg)}}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- NORMAL BACKGROUND -->
+
+<div class="photoBackground"></div>
+
+
+<!-- VIDEO -->
+
+<video
+    class="videoBackground"
+    id="giftVideo"
+    muted
+    loop
+    playsinline>
+
+    <source src="background.mp4" type="video/mp4">
+
+</video>
+
+
+<div class="vignette"></div>
+
+
+<!-- BACKGROUND STARS -->
+
+<div class="bgStar" style="left:5%;top:10%"></div>
+<div class="bgStar" style="left:15%;top:30%"></div>
+<div class="bgStar" style="left:25%;top:15%"></div>
+<div class="bgStar" style="left:35%;top:7%"></div>
+<div class="bgStar" style="left:48%;top:20%"></div>
+<div class="bgStar" style="left:60%;top:8%"></div>
+<div class="bgStar" style="left:72%;top:25%"></div>
+<div class="bgStar" style="left:87%;top:12%"></div>
+
+<div class="bgStar" style="left:10%;top:75%"></div>
+<div class="bgStar" style="left:30%;top:85%"></div>
+<div class="bgStar" style="left:50%;top:75%"></div>
+<div class="bgStar" style="left:70%;top:85%"></div>
+<div class="bgStar" style="left:90%;top:65%"></div>
+
+
+<!-- MOON -->
+
+<div class="moon"></div>
+
+
+<!-- MAIN CARD -->
+
+<div class="card">
+
+
+<!-- =====================
+     FIRST PAGE
+===================== -->
+
+<div id="question">
+
+    <div style="font-size:70px">
+        🐷
+    </div>
+
+    <h1>
+        Aloo Bangaram 🩷
+    </h1>
+
+    <p>
+        Do you want to see it? 👀✨
+    </p>
+
+    <button
+        class="yesButton"
+        onclick="yesClicked()">
+
+        YES ❤️‍🔥
+
+    </button>
+
+    <button
+        class="noButton"
+        id="noBtn">
+
+        NO 🫩
+
+    </button>
+
+</div>
+
+
+<!-- =====================
+     CHOICES
+===================== -->
+
+<div id="choose" style="display:none">
+
+    <h1>
+        Hehheheheeheh!❤️
+    </h1>
+
+    <p>
+        Choose your surprise ✨
+    </p>
+
+
+    <div
+        class="choice"
+        onclick="openGift()">
+
+        <div class="choiceEmoji">
+            ⚜️
+        </div>
+
+        <div>
+            Niharika's Aashirvaadam
+        </div>
+
+    </div>
+
+
+    <div
+        class="choice"
+        onclick="openCake()">
+
+        <div class="choiceEmoji">
+            🎂
+        </div>
+
+        <div>
+            Cake
+        </div>
+
+    </div>
+
+
+    <div
+        class="choice"
+        onclick="openNoGift()">
+
+        <div class="choiceEmoji">
+            💗
+        </div>
+
+        <div>
+            Gift
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================
+     AASHIRVAADAM
+===================== -->
+
+<div id="giftScreen"
+     style="display:none">
+
+    <div style="font-size:65px">
+        ✨
+    </div>
+
+    <div class="giftTitle">
+        Niharika's Aashirvaadam❤️
+    </div>
+
+    <p>
+
+        Nee life eppudu
+        happiness tho nindipovali. 🥹
+
+        <br><br>
+
+        Nee dreams anni
+        one by one nijam avvali. ✨
+
+        <br><br>
+
+        God always bless you
+        with happiness,
+        health and success. 🙏❤️
+
+    </p>
+
+
+    <img
+        src="mem.jpg"
+        class="photo"
+        alt="Vimal photo">
+
+
+    <p>
+
+        Some moments become memories...
+
+        <br><br>
+
+        and some people become
+        <b>
+            the reason behind those memories. ❤️
+        </b>
+
+    </p>
+
+
+    <p>
+
+        Every laugh,
+        every silly moment,
+        every random conversation...
+
+        <br><br>
+
+        <b>
+            I wouldn't trade them
+            for anything. 🫶
+        </b>
+
+    </p>
+
+
+    <p>
+
+        You deserve a life full of
+        beautiful memories. ✨
+
+        <br><br>
+
+        <b>
+            Happy Birthday Vimal ❤️
+        </b>
+
+    </p>
+
+
+    <button
+        class="yesButton"
+        onclick="backToOptions()">
+
+        ← Back
+
+    </button>
+
+</div>
+
+
+<!-- =====================
+     SECRET GIFT
+===================== -->
+
+<div id="noGiftScreen"
+     style="display:none">
+
+    <div style="font-size:80px">
+        🐣
+    </div>
+
+    <h1>
+        Enti baabu Gift kavaalaa😏
+    </h1>
+
+
+    <!-- NEW GIFT PHOTO -->
+
+    <img
+        src="memory9.jpg"
+        class="giftPhoto"
+        alt="Special gift photo">
+
+
+    <p>
+
+        sareyy marii... 😂
+
+        <br><br>
+
+        "Nene" Gift uu😏😁✨
+
+        <br><br>
+
+        <b style="font-size:24px">
+         
+        </b>
+         Niku nenu undagaa malli vere gift enduku bangaaram😒😒
+        <br><br>
+     
+      IF YOU NEED ANY PROBLEM epdina ekdina I'M ALWAYS THERE FOR YOU✨❤️‍🔥
+        <br><br>
+
+        <span style="font-size:35px">
+          Apppiiee Birthday VIMAL 🐷🐒🐗🦍👀
+        </span>
+
+        <br><br>
+
+      nee precious time naaaku ichi chusinaduku dhanyavadamulu🐒🐒niku chudalani lekpoina,time lekpoina chudalii😒
+      <br><br>
+Andalso mee lanti pedda manshulaki nen chesina pillabacha wishes nachavemo🥺edo chesa helana chesi navvakandi🫩ardamindane anukuntunaa❗
+        <br><br>
+
+        <b>
+         VIMAL garu meeku ichina  gift nachithe nachindi ani nachaledu ante nachaledu ani maku feedback ivvandi✨😇
+        </b>
+
+    </p>
+
+        <div class="feedbackButtons">
+            <button class="feedbackYes" onclick="feedbackYes()">🫠 Nachindi</button>
+            <button class="feedbackNo" id="feedbackNo">👺 Nachaledu</button>
+        </div>
+
+        <p id="feedbackMessage" class="feedbackMessage"></p>
+
+
+    <button
+        class="yesButton"
+        onclick="backToOptions()">
+
+        ← Back
+
+    </button>
+
+</div>
+
+
+<!-- =====================
+     CAKE
+===================== -->
+
+<div id="cakeScreen"
+     style="display:none">
+
+    <div class="wishTitle">
+        ✨ Make a Wish ✨
+    </div>
+
+    <p>
+
+        Close your eyes...
+
+        <br>
+
+        Think of your favourite wish
+        ❤️
+
+        <br><br>
+
+        Then tap the candle 🕯️
+
+        <br>
+
+        screen meeda ekdina tap chey ipdu😁
+
+    </p>
+
+
+    <div
+        class="aesthetic-cake"
+        id="candleArea"
+        onclick="blowCandle(event)">
+
+        <div
+            class="flame"
+            id="flame">
+
+            🔥
+
+        </div>
+
+        <div class="candle">
+            🕯️
+        </div>
+
+        <div class="cakeEmoji">
+            🎂
+        </div>
+
+    </div>
+
+
+    <p id="blowText"></p>
+
+
+    <button
+        id="nextButton"
+        class="yesButton"
+        onclick="showFinal()"
+        style="display:none">
+
+        NEXT ✨
+
+    </button>
+
+    <br>
+
+    <button
+        class="yesButton"
+        onclick="backToOptions()">
+
+        ← Back
+
+    </button>
+
+</div>
+
+
+<!-- =====================
+     FINAL
+===================== -->
+
+<div id="surprise"
+     style="display:none">
+
+    <div style="font-size:75px">
+        🎂
+    </div>
+
+    <h1>
+        Happy Birthday Vimal! ❤️‍🔥🫠
+    </h1>
+
+    <img
+        src="memory3.jpg"
+        class="photo"
+        alt="Vimal">
+
+
+    <h2>
+        4th SEPTEMBER,2007
+    </h2>
+
+    <p>
+
+        Under this beautiful night sky...
+
+        <br><br>
+
+        I just want you to know
+        that you are really special to me. ❤️
+
+        <br><br>
+
+        Nee smile eppudu ilaane undali 😊
+
+        <br><br>
+
+        Nee life lo happiness,
+        success and beautiful memories
+        eppudu ninduga undali. ✨
+
+        <br><br>
+
+        <b>
+            Happy Birthday
+            Bangaram! 🩷
+        </b>
+
+        <br><br>
+
+        Stay happy.
+
+        <br>
+
+        Stay crazy.
+
+        <br>
+
+        Stay amazing. 🫶
+
+    </p>
+
+</div>
+
+
+</div>
+
+
+<script>
+
+
+/* =========================
+   YES
+========================= */
+
+function yesClicked(){
+
+    document.getElementById(
+        "question"
+    ).style.display="none";
+
+    document.getElementById(
+        "choose"
+    ).style.display="block";
+}
+
+
+/* =========================
+   NO BUTTON
+========================= */
+
+const noBtn =
+    document.getElementById("noBtn");
+
+
+function escapeNo(){
+
+    noBtn.style.position="fixed";
+
+    const maxX =
+        window.innerWidth -
+        noBtn.offsetWidth -
+        20;
+
+    const maxY =
+        window.innerHeight -
+        noBtn.offsetHeight -
+        20;
+
+    noBtn.style.left =
+        Math.max(
+            10,
+            Math.random()*maxX
+        )+"px";
+
+    noBtn.style.top =
+        Math.max(
+            10,
+            Math.random()*maxY
+        )+"px";
+}
+
+
+document.addEventListener(
+    "mousemove",
+    function(e){
+
+        const r =
+            noBtn.getBoundingClientRect();
+
+        const cx =
+            r.left+r.width/2;
+
+        const cy =
+            r.top+r.height/2;
+
+        const distance =
+            Math.hypot(
+                e.clientX-cx,
+                e.clientY-cy
+            );
+
+        if(distance<130){
+
+            escapeNo();
+
+        }
+
+    }
+);
+
+
+noBtn.addEventListener(
+    "mouseenter",
+    escapeNo
+);
+
+
+noBtn.addEventListener(
+    "click",
+    function(e){
+
+        e.preventDefault();
+
+        escapeNo();
+
+    }
+);
+
+
+/* =========================
+   HIDE ALL
+========================= */
+
+function hideAll(){
+
+    document.getElementById(
+        "question"
+    ).style.display="none";
+
+    document.getElementById(
+        "choose"
+    ).style.display="none";
+
+    document.getElementById(
+        "giftScreen"
+    ).style.display="none";
+
+    document.getElementById(
+        "noGiftScreen"
+    ).style.display="none";
+
+    document.getElementById(
+        "cakeScreen"
+    ).style.display="none";
+
+    document.getElementById(
+        "surprise"
+    ).style.display="none";
+
+
+    /* TURN VIDEO OFF */
+
+    const video =
+        document.getElementById("giftVideo");
+
+    video.style.opacity="0";
+
+    video.pause();
+
+    video.currentTime=0;
+
+
+    /* REMOVE GIFT MODE */
+
+    document.body.classList.remove("giftMode");
+}
+
+
+/* =========================
+   NIHARIKA BLESSINGS
+========================= */
+
+function openGift(){
+
+    hideAll();
+
+    document.getElementById(
+        "giftScreen"
+    ).style.display="block";
+}
+
+
+/* =========================
+   ACTUAL GIFT
+========================= */
+
+function openNoGift(){
+
+    hideAll();
+
+    document.getElementById(
+        "noGiftScreen"
+    ).style.display="block";
+
+
+    /* GIFT MODE ONLY */
+
+    document.body.classList.add("giftMode");
+
+
+    const video =
+        document.getElementById("giftVideo");
+
+    video.style.opacity="1";
+
+    video.currentTime=0;
+
+    video.play();
+
+}
+
+
+/* =========================
+   CAKE
+========================= */
+
+function openCake(){
+
+    hideAll();
+
+    document.getElementById(
+        "cakeScreen"
+    ).style.display="block";
+}
+
+
+/* =========================
+   BACK
+========================= */
+
+function backToOptions(){
+
+    candleBlown=false;
+
+    document.getElementById(
+        "flame"
+    ).style.opacity="1";
+
+    document.getElementById(
+        "flame"
+    ).style.transform="scale(1)";
+
+    document.getElementById(
+        "nextButton"
+    ).style.display="none";
+
+
+    hideAll();
+
+    document.getElementById(
+        "choose"
+    ).style.display="block";
+}
+
+
+/* =========================
+   CANDLE
+========================= */
+
+const popPhotos = [
+    "memory1.jpg",
+    "memory12.jpg",
+    "memory11.jpg",
+    "memory14.jpg",
+    "memory3.jpg",
+    "memory2.jpg"
+];
+
+let candleBlown=false;
+
+
+function blowCandle(event){
+
+    if(candleBlown){
+        return;
+    }
+
+    candleBlown=true;
+
+
+    const flame =
+        document.getElementById("flame");
+
+
+    flame.style.transition=
+        "0.6s ease";
+
+    flame.style.opacity="0";
+
+    flame.style.transform=
+        "scale(.1)";
+
+
+    createPhotoPop(
+        event.clientX,
+        event.clientY
+    );
+
+
+    createNameAt(
+        event.clientX,
+        event.clientY
+    );
+
+
+    setTimeout(
+        function(){
+
+            document.getElementById(
+                "nextButton"
+            ).style.display=
+                "inline-block";
+
+        },
+        2500
+    );
+}
+
+
+/* =========================
+   CLICK ANYWHERE
+========================= */
+
+document.addEventListener(
+    "click",
+    function(event){
+
+        if(!candleBlown){
+            return;
+        }
+
+
+        if(
+            event.target.closest("button")
+        ){
+            return;
+        }
+
+
+        if(
+            event.target.closest("#candleArea")
+        ){
+            return;
+        }
+
+
+        createPhotoPop(
+            event.clientX,
+            event.clientY
+        );
+
+
+        createNameAt(
+            event.clientX,
+            event.clientY
+        );
+
+    }
+);
+
+
+/* =========================
+   PHOTO POP
+========================= */
+
+function createPhotoPop(x,y){
+
+    const photo =
+        document.createElement("img");
+
+
+    photo.className=
+        "popPhoto";
+
+
+    photo.src =
+        popPhotos[
+            Math.floor(
+                Math.random() * popPhotos.length
+            )
+        ];
+
+
+    photo.alt=
+        "Vimal";
+
+
+    photo.style.left=
+        x+"px";
+
+
+    photo.style.top=
+        y+"px";
+
+
+    const size=
+        95+
+        Math.random()*55;
+
+
+    photo.style.width=
+        size+"px";
+
+
+    photo.style.height=
+        size+"px";
+
+
+    photo.style.animationDuration=
+        (
+            1.8+
+            Math.random()*.8
+        )+"s";
+
+
+    document.body.appendChild(
+        photo
+    );
+
+
+    createPhotoStars(
+        x,
+        y
+    );
+
+
+    setTimeout(
+        function(){
+
+            photo.remove();
+
+        },
+        3000
+    );
+}
+
+
+/* =========================
+   PHOTO STAR BURST
+========================= */
+
+function createPhotoStars(x,y){
+
+    const stars=[
+        "✦",
+        "✧",
+        "⋆",
+        "✨",
+        "⭐",
+        "✦"
+    ];
+
+
+    for(
+        let i=0;
+        i<14;
+        i++
+    ){
+
+        const star=
+            document.createElement(
+                "div"
+            );
+
+
+        star.className=
+            "photoStar";
+
+
+        star.innerHTML=
+            stars[
+                Math.floor(
+                    Math.random()*
+                    stars.length
+                )
+            ];
+
+
+        star.style.left=
+            x+"px";
+
+
+        star.style.top=
+            y+"px";
+
+
+        star.style.setProperty(
+            "--moveX",
+            (
+                Math.random()*180-
+                90
+            )+"px"
+        );
+
+
+        star.style.setProperty(
+            "--moveY",
+            (
+                Math.random()*180-
+                90
+            )+"px"
+        );
+
+
+        star.style.animationDelay=
+            (
+                Math.random()*.15
+            )+"s";
+
+
+        document.body.appendChild(
+            star
+        );
+
+
+        setTimeout(
+            function(){
+
+                star.remove();
+
+            },
+            1700
+        );
+
+    }
+}
+
+
+/* =========================
+   NAMES
+========================= */
+
+const names=[
+
+    "Bangaram ⚜️❤️",
+    "𝓑𝓪𝓷𝓰𝓪𝓻𝓪𝓶 🫠✨",
+    "𝑩𝒂𝒏𝒈𝒂𝒓𝒂𝒎 🩷💫",
+    "𝐁𝐚𝐧𝐠𝐚𝐫𝐚𝐦 💕",
+    "𝘽𝙖𝙣𝙜𝙖𝙧𝙖𝙢 ❣️",
+    "𝔅𝔞𝔫𝔤𝔞𝔯𝔞𝔪 ❤️‍🔥",
+    "𝕭𝖆𝖓𝖌𝖆𝖗𝖆𝖒 ⚜️🫠",
+
+    "బంగారం ⚜️❤️",
+    "బంగారం 🫠✨",
+    "బంగారం 💗💫",
+
+    "ಬಂಗಾರಂ 😘⚜️",
+
+    "Vimal ⚜️❤️",
+    "𝓥𝓲𝓶𝓪𝓵 ✨",
+    "𝑽𝒊𝒎𝒂𝒍 🧿",
+    "𝐕𝐢𝐦𝐚𝐥 💕",
+    "𝘝𝘪𝘮𝘢𝘭 🩷",
+    "𝕍𝕚𝕞𝕒𝕝 ⚜️💖",
+
+    "విమల్ ⚜️❤️",
+    "विमल ❤️‍🔥✨",
+    "விமல் ⚜️💫",
+    "ವಿಮಲ್ ❤️‍🔥",
+    "വിമൽ ⚜️💖",
+    "বিমল 💗",
+    "વિમલ ✨",
+    "ਵਿਮਲ ⚜️🫠"
+
+];
+
+
+const fonts=[
+
+    "Arial",
+    "Georgia",
+    "cursive",
+    "serif",
+    "fantasy",
+    "Trebuchet MS",
+    "Verdana"
+
+];
+
+
+/* =========================
+   CREATE NAME
+========================= */
+
+function createNameAt(x,y){
+
+    const name=
+        document.createElement(
+            "div"
+        );
+
+
+    name.className=
+        "clickName";
+
+
+    name.innerHTML=
+        names[
+            Math.floor(
+                Math.random()*
+                names.length
+            )
+        ];
+
+
+    name.style.left=
+        x+"px";
+
+
+    name.style.top=
+        y+"px";
+
+
+    name.style.fontFamily=
+        fonts[
+            Math.floor(
+                Math.random()*
+                fonts.length
+            )
+        ];
+
+
+    name.style.fontSize=
+        (
+            17+
+            Math.random()*13
+        )+"px";
+
+
+    document.body.appendChild(
+        name
+    );
+
+
+    setTimeout(
+        function(){
+
+            name.remove();
+
+        },
+        2800
+    );
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+function showFinal(){
+
+    candleBlown=false;
+
+    hideAll();
+
+    document.getElementById(
+        "surprise"
+    ).style.display="block";
+
+
+    createConfetti();
+
+    createHearts();
+
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+function createConfetti(){
+
+    for(
+        let i=0;
+        i<140;
+        i++
+    ){
+
+        const c=
+            document.createElement(
+                "div"
+            );
+
+
+        c.className=
+            "confetti";
+
+
+        c.style.left=
+            Math.random()*100+
+            "vw";
+
+
+        const colors=[
+
+            "#ff4081",
+            "#ffd700",
+            "#00bcd4",
+            "#7c4dff",
+            "#4caf50",
+            "#ff5722"
+
+        ];
+
+
+        c.style.background=
+            colors[
+                Math.floor(
+                    Math.random()*
+                    colors.length
+                )
+            ];
+
+
+        c.style.animationDuration=
+            (
+                2+
+                Math.random()*3
+            )+"s";
+
+
+        document.body.appendChild(
+            c
+        );
+
+
+        setTimeout(
+            function(){
+
+                c.remove();
+
+            },
+            5500
+        );
+
+    }
+}
+
+
+/* =========================
+   HEARTS
+========================= */
+
+function createHearts(){
+
+    for(
+        let i=0;
+        i<30;
+        i++
+    ){
+
+        const h=
+            document.createElement(
+                "div"
+            );
+
+
+        h.className=
+            "heart";
+
+
+        h.innerHTML=
+            "❤️";
+
+
+        h.style.left=
+            Math.random()*100+
+            "vw";
+
+
+        h.style.animationDuration=
+            (
+                4+
+                Math.random()*3
+            )+"s";
+
+
+        document.body.appendChild(
+            h
+        );
+
+
+        setTimeout(
+            function(){
+
+                h.remove();
+
+            },
+            7000
+        );
+
+    }
+}
+
+
+
+/* =========================
+   FEEDBACK BUTTONS
+========================= */
+const feedbackNoButton = document.getElementById("feedbackNo");
+
+function moveFeedbackNo(){
+    feedbackNoButton.style.position="fixed";
+    const maxX=window.innerWidth-feedbackNoButton.offsetWidth-20;
+    const maxY=window.innerHeight-feedbackNoButton.offsetHeight-20;
+    feedbackNoButton.style.left=Math.max(10,Math.random()*maxX)+"px";
+    feedbackNoButton.style.top=Math.max(10,Math.random()*maxY)+"px";
+}
+
+feedbackNoButton.addEventListener("mouseenter",moveFeedbackNo);
+feedbackNoButton.addEventListener("touchstart",function(e){e.preventDefault();moveFeedbackNo();});
+feedbackNoButton.addEventListener("click",function(e){e.preventDefault();moveFeedbackNo();});
+
+function feedbackYes(){
+    document.getElementById("feedbackMessage").innerHTML="Avnaaa🩷Nijammaa!😁😘✨";
+    
+    createFeedbackStars();
+    createFeedbackPhotos();
+}
+
+
+function createFeedbackStars(){
+    const stars=["✨","⭐","🌟","✦","✧","⋆"];
+    for(let i=0;i<45;i++){
+        const star=document.createElement("div");
+        star.className="feedbackStar";
+        star.innerHTML=stars[Math.floor(Math.random()*stars.length)];
+        star.style.left=Math.random()*100+"vw";
+        star.style.top=Math.random()*100+"vh";
+        star.style.fontSize=(12+Math.random()*22)+"px";
+        star.style.setProperty("--sx",(Math.random()*180-90)+"px");
+        star.style.setProperty("--sy",(Math.random()*180-90)+"px");
+        star.style.animationDelay=Math.random()*.5+"s";
+        document.body.appendChild(star);
+        setTimeout(function(){star.remove();},2500);
+    }
+}
+
+function createFeedbackPhotos(){
+    const photos=["memory.jpg","memory10.jpg","memory4.jpg","memory5.jpg","memory6.jpg","memory7.jpg","memory8.jpg","memory13.jpg"];
+    for(let i=0;i<8;i++){
+        const photo=document.createElement("img");
+        photo.className="feedbackPopPhoto";
+        photo.src=photos[i%photos.length];
+        photo.alt="Memory";
+        photo.style.left=(8+Math.random()*78)+"vw";
+        photo.style.top=(10+Math.random()*70)+"vh";
+        photo.style.animationDelay=(i*.18)+"s";
+        document.body.appendChild(photo);
+        setTimeout(function(){photo.remove();},3600+i*180);
+    }
+}
+
+</script>
+
+</body>
+
+</html>
